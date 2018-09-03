@@ -1,0 +1,77 @@
+<div class=" cal conversions">
+    <a name="conversions">
+        <h1 class="up"> Coordenate converstions </h1>
+    </a>
+    <p>Special tool for the conversion of GPS coordinates (GMS to GD). In case of West or South add the negative sign (-). </p>
+  
+    <hr/>
+   
+    <h4>GMS (degrees, minutes, seconds)*</h4>
+    <fieldset>
+        <legend>Latitude : </legend>
+        <input type="number" id="degreeLat" name="degreeLat" class="sexa">
+        <label for="degreeLat">°</label>
+        <input type="number" id="minuteLat" name="minuteLat" class="sexa">
+        <label for="minuteLat">'</label>
+        <input type="number" id="secondLat" name="secondLat" class="sexa">
+        <label for="secondLat">''</label>
+    </fieldset>
+    <fieldset>
+        <legend>Longitude : </legend>
+        <input type="number" id="degreeLon" name="degreeLon" class="sexa">
+        <label for="degreeLon">°</label>
+        <input type="number" id="minuteLon" name="minuteLon" class="sexa">
+        <label for="minuteLon">'</label>
+        <input type="number" id="secondLon" name="secondLon" class="sexa">
+        <label for="secondLon">''</label>
+    </fieldset>
+    <button type="button" name="coordenate_values" id="coordenate_values">Conversions</button> 
+    <hr/>
+    <h4>GD (decimal degrees)*</h4>
+    <label for="decimalLat">Latitude : </label>
+    <input type="text" id="decimalLat" name="decimalLat" class="decimal">
+    </br>
+    <label for="decimalLon">Longitude : </label>
+    <input type="text" id="decimalLon" name="decimalLon" class="decimal">
+    
+    <h4>* World Geodetic System 1984 (WGS 84)</h4>
+</div>
+<div class="cal analyst">
+    <a name="analyst">
+        <h1 class="up"> Data analyst</h1>
+    </a>
+    <p>This basic statistical study on your data can help you to a fast quality control.</p>
+    <hr/>
+    <ul class="instructions"> Make sure your file follows the following format: 
+        <li>Input a .csv file</li>
+        <li >Not headers </li>
+    </ul>
+
+    <input type="file" id="file_data_analyst" class="file">
+    <button type="button" id="data_analyst_values" name="data_analyst">Send data</button>
+
+    <ul class="res_analyst" id="res_analyst">
+     
+    </ul>
+
+    <div id="chart_divDA"> </div>
+</div>
+
+
+<div class="cal bouguer">
+    <a name="bouguer">
+        <h1> Anomaly de Bouguer map</h1>
+    </a>
+
+    <ul> Specifications
+        <li>Rules 1</li>
+        <li>Rule 2 </li>
+    </ul>
+
+    <input type="file" id="file_data_bouguer" class="file">
+    <button type="button" id="bouguer_values" name="bouguer_map">Send data </button>
+
+    <div class="res_bouguer" id="res_bouguer"> AQUI APARECERA el mapa </div>
+    <div id="chart_div"></div>
+
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gravimetric Fiel {{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href='/images/44755655_potato.ico' rel="shortcut icon" type='image/x-ico'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/fontello.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="/javascripts/front.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="witdh=device-witdh, initial-scale =1.0 ">
+</head>
+
+<body>
+  <header>
+    <h1 class="header-title"> Gravimetric Field </h1>
+    <input type="checkbox" id="menu-bar">
+    <label class="icon-menu" for="menu-bar"></label>
+    <nav class="menu">
+      <ul>
+        <li class="mainOption">
+          <a class="links" href="/"> Home </a>
+        </li>
+        <li class="mainOption">
+          <a class="links" href="/basic_concepts"> Basic Concepts</a>
+        </li>
+        <li class="mainOption">
+          <a class="links" href="/gravimetric_values"> Gravimetric Values</a>
+        </li>
+        <li class="mainOption">
+          <a class="links" href="/official_websites"> Official Websites </a>
+        </li>
+        <li class="calculators mainOption Submenu">
+          <a class="links" href="/calculators"> Calculators
+            <span class="icon-down-circle"></span>
+          </a>
+          <ul>
+            <li class="subOption">
+              <a class="links " href="/calculators#conversions">Coordinate conversions</a>
+            </li>
+             <li class="subOption">
+              <a class="links " href="/calculators#analyst">Basic statistics data analyst</a>
+            </li>
+            <li class="subOption">
+              <a class="links " href="/calculators#bouguer"> Simple Bouguer anomaly map</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mainOption">
+          <a class="links" href="/contact" class="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    {{{body}}}
+  </section>
+
+  {{!--
+  <footer>
+    <h3 class="titleFooter">Gravimetric Field </h3>
+  </footer> --}}
+
+</body>
+
+</html>

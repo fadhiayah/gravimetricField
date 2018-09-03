@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+html {
+  background-image : url(../images/back.jpeg);
+  background-repeat: repeat-y;
+  background-position: right 50px;
+  /*background-size: 100vw;*/
+  background-size: 35%;
+  background-attachment: fixed;
+  font-size: 12.5px;
+}
+/* -----------------Header style------------------ */
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: white; 
+  color:black;
+  position: fixed;
+  font-size: 100%;   
+  z-index: 100;
+}
+.header-title {
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;    
+}
+/* botton for small size*/
+header label {
+  font-size: 16px;
+  margin-top: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  float: right;
+}
+#menu-bar {
+  display: none;
+}
+.menu ul {
+  list-style: none;
+}
+.menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(0 , 0,0, 0.9);
+  transition: all 0.5s;
+  transform: translateX(-100%);
+}
+#menu-bar:checked ~ .menu {
+  transform: translateX(0%);
+}
+.menu li ul {
+  display: none;
+}
+.menu .links {
+  text-decoration: none;
+  color: white;
+}
+.menu .mainOption  {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 0.7px solid rgba(255, 255,255, 0.9); 
+}
+.menu li.subOption {
+  padding: 10px 0px;
+  text-align: center;
+}
+.menu ul li:hover ul {
+  display: block;
+}
+.menu a span {
+  position: absolute;
+  right: 5px;
+}
+.links:hover {
+  color: red;
+  cursor: pointer;
+  font-weight: bold; 
+}
+
+
+
+/* -----------------Header style------------------ */
+section {
+ padding-top: 80px;
+ width: 80%;
+ margin: 0 auto;
+ 
+}
+/*footer {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}*/
+
+.divVideoHome {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+h3.titleVideoHome  {
+text-align: center;
+margin-top: 30px;
+}
+div.video {
+  margin: 10px;
+}
+video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.sexa {
+  display: inline-block;
+  width: 50px;
+  border: 1px solid  rgba(207, 198, 198, 0.9);
+
+}
+.decimal {
+  border: 1px solid  rgba(207, 198, 198, 0.9);
+  width: 50%;
+}
+.cal {
+  margin-bottom:70px;
+}
+fieldset  {
+  border: none;
+  
+}
+fieldset legend {
+  padding: 10px 0px;
+ 
+}
+h1{
+  text-align: center;
+  margin-bottom: 10px
+}
+div.cal p {
+  margin: 10px;
+}
+
+div.cal ul.res_analyst {
+  text-align: left;
+  margin: 0 auto;
+  width: 50%;
+  /*background-color:rgb(51, 153, 255);*/
+  /*border-radius: 5px;*/
+  /*padding: 5px;*/
+  
+}
+
+div.cal ul.res_analyst li {
+  margin: 5px;
+  padding: 5px;
+  list-style-type:none;
+  border-bottom: 1px solid black;
+  
+}
+
+.res_bouguer {
+  width: 40%;
+
+}
+
+
+
+
+
+/*.cal {
+  height: 600px;
+  margin-bottom: 20px;
+  border: 1px solid orange;
+}
+.cal_conversions {
+  height: 300px;
+}*/
+
+
+/* -----------------Form style------------------ */
+form.contact {
+ width: 100%;
+ margin: auto;
+ padding: 20px;
+ background-color: rgba(0, 0, 0, 0.4);
+ box-shadow: 3px 3px 10px 5px black;
+ text-align: center;
+ border-radius: 20px;
+ box-sizing: border-box;
+ color: white
+}
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;    
+}
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+.Submit {
+  background-color: rgba(0, 102, 255 , 0.6);
+  color: white;
+}
+.Submit:hover {
+  cursor: pointer;
+}
+form.contact p {
+  margin-bottom: 10px;
+}
+form .mainc {
+  text-align: center;
+}
+form .secondc {
+  text-align:justify;
+}
+button {
+  background-color: rgb(0, 0, 255);
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  /*border-radius: 5px;*/
+  text-align: center;
+  padding: 5px;
+  margin: 10px 0px;
+  
+
+}
+div.cal h4 {
+  margin :10px 0px ;
+
+}
+ul.instructions {
+  margin: 10px 0px;
+}
+ul.instructions li {
+  margin: 10px 0px;
+  list-style-type:circle;
+
+}
+input.file {
+  padding: 0px;
+  margin: 20px 0px;
+}
+/*input.file {
+  margin: none;
+  padding: none;
+}*/
+
+/* -----------------Form style------------------ */
+/* -----------------Desktop size------------------ */
+
+@media (min-width: 960px) {
+  html {
+      background-position: right 90px;
+  }
+  body {
+      font-size: 14px;    
+  }
+  section {
+      padding-top: 120px;
+      margin-left: 5%;
+      width: 60%;
+   }
+  header label {
+      display: none;
+  }
+  .menu ul {
+      display: flex;
+      justify-content: center;
+  }
+  .menu {
+      width: 100%;
+      height: 40px;
+      background-color: rgb(0, 204, 0);
+      transition: none;
+      transform:none;
+      
+   }
+  .menu .mainOption  {
+      border-bottom: none;   
+  }
+  .menu a span {
+      position: relative;
+      right: 0px;
+  }
+  .menu ul li:hover ul {
+      display: block;
+      position: absolute;
+  }
+  .menu li.subOption {
+      padding: 10px 10px;
+      text-align: left;
+      background-color: rgba(0 , 0,0, 0.7);
+      border-bottom: 0.3px solid rgba(255, 255,255, 0.9); 
+  }
+  .Submenu ul {
+      margin-top: 8px;
+  }
+  .mainOption:hover {
+      background: none;
+  }
+  form {
+      width: 80%;  
+  }
+ 
+ /* .up {
+   padding-top:100px;
+   }*/
+   .sexa {
+    width: 60px;
+  }
+  
+ /* input, textarea {
+    margin : 5px;  
+  }*/
+  /*input.file {
+    margin: none;
+    padding: none;
+  }*/
+ 
+
+  
+}
+
+
+/* -----------------Desktop size------------------ */
+
+
+/* ----------------- Tablet size ------------------ */
+@media (min-width: 400px) and (max-width: 970px) {
+  body {
+      font-size: 12px;  
+  }
+  form {
+      width: 80%;  
+  }
+  input, textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+  }
+  section {
+      margin-left: 5%;
+      width: 60%;
+   }
+}
+
+/* ----------------- Tablet size ------------------ */
