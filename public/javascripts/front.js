@@ -37,6 +37,9 @@ window.onload = function () {
  
      });*/
 
+    
+
+    
 
     // ----- Coordenate conversions ----- // 
     const input_coordenate = document.getElementById('coordenate_values');
@@ -354,6 +357,9 @@ window.onload = function () {
             });
         }
     });
+   
+    
+    //console.log (selectCounty.selectedIndex);
 
 
     //-----Submit Input validated  -----// 
