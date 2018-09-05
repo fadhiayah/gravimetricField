@@ -2,8 +2,6 @@ window.onload = function () {
     console.log('loaded site')
 
 
-
-
     /* // prueba de fetch y funciona 
      const prueba = document.getElementById('submit');
      console.log(prueba);
@@ -14,7 +12,7 @@ window.onload = function () {
          }
          let json_data_envio = JSON.stringify(data_envio);
          console.log("json: " + json_data_envio);
- 
+     
          var request = new Request(url, {
              method: 'POST',
              body: json_data_envio,
@@ -34,12 +32,12 @@ window.onload = function () {
                  console.log(j);
                  document.getElementById('resultado').value = j.resultado;
              });
- 
+     
      });*/
 
-    
 
-    
+
+
 
     // ----- Coordenate conversions ----- // 
     const input_coordenate = document.getElementById('coordenate_values');
@@ -357,8 +355,8 @@ window.onload = function () {
             });
         }
     });
-   
-    
+
+
     //console.log (selectCounty.selectedIndex);
 
 

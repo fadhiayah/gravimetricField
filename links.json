@@ -1,0 +1,102 @@
+[
+ {
+   "Continent": "South America",
+   "Country": "venezuela",
+   "website": "http://www.igvsb.gob.ve/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "argentina",
+   "website": "http://www.ign.gob.ar/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "peru",
+   "website": "http://www.ign.gob.pe/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "colombia",
+   "website": "https://www.igac.gov.co/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "chile",
+   "website": "https://www.igm.cl/"
+ },
+ {
+   "Continent": "Centro America",
+   "Country": "mexico",
+   "website": "http://www.inegi.org.mx/"
+ },
+ {
+   "Continent": "Centro America",
+   "Country": "panama",
+   "website": "http://ignpanama.anati.gob.pa/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "bolivia",
+   "website": "http://www.igmbolivia.gob.bo/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "ecuador",
+   "website": "https://www.igepn.edu.ec/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "uruguay",
+   "website": "http://www.sgm.gub.uy/"
+ },
+ {
+   "Continent": "South America",
+   "Country": "brazil",
+   "website": "https://www.ibge.gov.br/"
+ },
+ {
+   "Continent": "Centro America",
+   "Country": "Costa Rica",
+   "website": "http://www.snitcr.go.cr/"
+ },
+ {
+   "Continent": "Europe",
+   "Country": "espana",
+   "website": "http://www.ign.es/"
+ },
+ {
+   "Continent": "Europe",
+   "Country": "portugal",
+   "website": "http://www.igeo.pt/"
+ },
+ {
+   "Continent": "North America",
+   "Country": "USA",
+   "website": "https://www.usgs.gov/"
+ },
+ {
+   "Continent": "Europe",
+   "Country": "Francia",
+   "website": "http://www.ign.fr/"
+ },
+ {
+   "Continent": "Europe",
+   "Country": "Alemania",
+   "website": "https://www.bgr.bund.de/"
+ },
+ {
+   "Continent": "Asia",
+   "Country": "China",
+   "website": "http://en.cgs.gov.cn/"
+ },
+ {
+   "Continent": "Asia",
+   "Country": "japan",
+   "website": "https://www.gsj.jp/en/"
+ },
+ {
+   "Continent": "North America",
+   "Country": "canada",
+   "website": "http://webapp.geod.nrcan.gc.ca"
+ }
+];
