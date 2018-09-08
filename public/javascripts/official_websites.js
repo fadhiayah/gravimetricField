@@ -34,8 +34,41 @@ window.onload = function () {
             .then(function (json_response) {
                 // Ahora 'j' es un objeto JSON
                 console.log(json_response);
-                //document.getElementById('decimalLat').value = json_response.decimalLat;
-                //document.getElementById('decimalLon').value = json_response.decimalLon;
+
+                let resLinks = document.getElementById('ulList');
+                console.log(resLinks);
+                let c = json_response.city;
+                let w = json_response.sites;
+
+                console.log(c);
+                let leng = c.length;
+                console.log(leng);
+
+                resLinks.innerHTML = "";
+
+                for (let i = 0; i <= (leng - 1); i += 1) {
+
+                    let a = document.createElement("a");
+                    //let y = a.innerHTML = (c[i] + " : " + w[i]);
+                    let aContent = w[i];
+                    a.innerHTML = aContent;
+                    
+                    let p = document.createElement("p");
+                    let pContent = c[i] + " : " + aContent;
+                    p.innerHTML = pContent;
+                    //let casa1 = p.innerHTML = "esto funciona" + y ;
+                    //console.log (casa1);  
+                    let down = document.createElement("br");
+                    a.href = w[i];
+                    a.className = "linksWeb";
+                    resLinks.appendChild(p);
+                    p.appendChild(a);
+                    a.appendChild(down);
+
+                }
+
+
+
             });
     });
 
