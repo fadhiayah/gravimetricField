@@ -1,5 +1,6 @@
+
 window.onload = function () {
-    console.log('loaded site')
+  console.log('loaded site2')
 
     let select = document.getElementById("continent");
     console.log(select);
@@ -52,18 +53,30 @@ window.onload = function () {
                     //let y = a.innerHTML = (c[i] + " : " + w[i]);
                     let aContent = w[i];
                     a.innerHTML = aContent;
-                    
+                    let flat = document.createComment("img");
+                    //flat.href = "/images/canada";
+                    flat.src = "/images/canada";
+
+
                     let p = document.createElement("p");
-                    let pContent = c[i] + " : " + aContent;
-                    p.innerHTML = pContent;
-                    //let casa1 = p.innerHTML = "esto funciona" + y ;
-                    //console.log (casa1);  
+                    let pContent = c[i];
+                    let y = "hola";
+
+
+                    p.innerHTML = pContent + " : ";
                     let down = document.createElement("br");
                     a.href = w[i];
+                    a.target = "_blank";
                     a.className = "linksWeb";
+                    p.appendChild(flat);
+
+
                     resLinks.appendChild(p);
+
                     p.appendChild(a);
-                    a.appendChild(down);
+
+                    p.appendChild(down);
+
 
                 }
 
@@ -75,4 +88,5 @@ window.onload = function () {
 
 
 
-}
+};
+

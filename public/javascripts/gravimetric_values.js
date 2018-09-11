@@ -1,5 +1,5 @@
 window.onload = function () {
-    console.log('loaded site')
+    console.log('loaded site3')
     
     let select = document.querySelectorAll("select");
     console.log(select);

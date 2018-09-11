@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/fontello.css">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="/javascripts/front.js"></script>
-  <script src="/javascripts/gravimetric_values.js"></script>
-   <script src="/javascripts/official_websites.js"></script>
+  {{!-- <script src="/javascripts/front.js"></script>
+  <script src="/javascripts/gravimetric_values.js"></script> 
+  <script src="/javascripts/official_websites.js"></script> --}} 
   <meta charset="UTF-8">
   <meta name="viewport" content="witdh=device-witdh, initial-scale =1.0 ">
 </head>
@@ -32,7 +32,7 @@
           <a class="links" href="/gravimetric_values"> Gravimetric Values</a>
         </li>
         <li class="mainOption">
-          <a class="links" href="/official_websites"> Official Websites </a>
+          <a class="links" href="/official_websites" id="official_websites"> Official Websites </a>
         </li>
         <li class="calculators mainOption Submenu">
           <a class="links" href="/calculators"> Calculators
@@ -42,7 +42,7 @@
             <li class="subOption">
               <a class="links " href="/calculators#conversions">Coordinate conversions</a>
             </li>
-             <li class="subOption">
+            <li class="subOption">
               <a class="links " href="/calculators#analyst">Basic statistics data analyst</a>
             </li>
             <li class="subOption">

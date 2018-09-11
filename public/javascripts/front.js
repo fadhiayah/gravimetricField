@@ -1,5 +1,5 @@
 window.onload = function () {
-    console.log('loaded site')
+   console.log('loaded site')
 
 
     /* // prueba de fetch y funciona 
