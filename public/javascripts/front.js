@@ -200,16 +200,6 @@ window.onload = function () {
                                 ulDa.appendChild(liV);
                                 ulDa.appendChild(liMax);
 
-
-                                /*let liMean = document.createElement ("li")
-                                liMean.innerHTML =('Mean Value : '+ json_responseDA.meanValue);
-                                ulDa.appendChild(liMean);*/
-
-
-                                //let p = document.getElementById('res_analyst');
-                                //console.log(p);
-                                //p.innerHTML = json_responseDA.minValue;
-
                             });
                         console.log('lo que metere al grafico :' + fileArray);
                         console.log('typeoff' + typeof (fileArray));
@@ -356,42 +346,4 @@ window.onload = function () {
         }
     });
 
-
-    //console.log (selectCounty.selectedIndex);
-
-
-    //-----Submit Input validated  -----// 
-    /* const data_analyst_values = document.getElementById('data_analyst_values');
-     console.log(data_analyst_values);
-     data_analyst_values.addEventListener('click', function () {*/
-
-    /*const url = 'http://localhost:3000/calculators/data_analyst';
-    let data_envio = {
-        name: fileArray,
-    }
-    let json_data_envio = JSON.stringify(data_envio);
-    console.log("json: " + json_data_envio);
-
-    var request = new Request(url, {
-        method: 'POST',
-        body: data_envio,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-    });
-    fetch(request)
-        .then(function (respuesta) {
-            // Convertir a JSON
-            console.log('estou en el frontend');
-            console.log(respuesta);
-            return respuesta.json();
-        })
-        .then(function (j) {
-            // Ahora 'j' es un objeto JSON
-            console.log(j);
-            document.getElementById('res_analyst').value = j.resultado;
-        });
-
-    /*});*/
 }

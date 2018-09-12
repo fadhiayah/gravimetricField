@@ -1,63 +1,128 @@
 var express = require('express');
 var router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
+
 
 /* GET contact page. */
 router.get('/', function (req, res, next) {
   res.render('gravimetric_values', { title: '/gravimetric_values' });
 });
 
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://localhost:27017';
 
-//prueba funciona
-router.post ("/country",function(request,response,next){
-    console.log('in backend');
-
-    console.log (request.body);
-    console.log (request.body.valueSelected);
-    
-    MongoClient.connect(url, function (err, client) {
-      console.log("using MongoDB");
-      let dbo = client.db('gravimetricValues');
-      //let collection = dbo.collection('bases');
-      //let query = { city : /^Sas/};
-      //let sort = { city: 0 };
-      dbo.collection("pr").find({} , {_id:0, x:1,y:1}).toArray(function (err, bases) {
-        console.log( bases);
-        //console.log (typeof(bases));
-        //console.log (bases[1].city);
-        client.close();
-        //res.render('gravimetric_values', { title: '/gravimetric_values', baseInformation: bases });
-  
-      });
-    });
+router.post("/country", function (request, response, next) {
+  console.log('in backend');
+  console.log(request.body);
 
 
 
-    //let resp = {
-      //  resultado: request.body.name *5, 
-        //comentario : "resultado de la formula"    
-    //}
-   //console.log (resp)
-    //response.send (resp);
-});
+  MongoClient.connect(url, function (error, client) {
+    console.log("Conectados a MongoDB");
+    let dbo = client.db("gravimetricValues");
 
+    dbo.collection("bases").find({ country: request.body.valueSelected }).toArray(function (err, bases) {
 
+      console.log(bases[0].city);
+      //console.log (links[0].Country);
 
-/*router.get('/country', function (req, res, next) {
-  MongoClient.connect(url, function (err, client) {
-    console.log("using MongoDB");
-    let db = client.db('gravimetricValues');
-    let collection = db.collection('bases');
-    collection.find({ "country": "Canada" }).toArray(function (err, bases) {
-      console.log(bases);
-      console.log (typeof(bases));
       client.close();
-      res.render('gravimetric_values', { title: '/gravimetric_values', baseInformation: bases });
+      let leng = bases.length;
+      console.log(leng);
+      let cities = [];
+      //let websites = [];
+
+      for (let i = 0; i <= (leng - 1); i += 1) {
+
+        let c = bases[i].city;
+        if (cities.indexOf(c) === -1) {
+          cities.push(c);
+        }
+      }
+      console.log(cities);
+      //console.log (websites);
+
+
+
+      let resLinks = {
+        city: cities,
+        //sites : websites
+      }
+
+      console.log(resLinks);
+
+      response.send(resLinks);
 
     });
   });
-});*/
+
+});
+
+router.post("/province", function (request, response, next) {
+  console.log('in backend');
+  console.log(request.body);
+
+
+
+  MongoClient.connect(url, function (error, client) {
+    console.log("Conectados a MongoDB");
+    let dbo2 = client.db("gravimetricValues");
+
+    dbo2.collection("bases").find({ city: request.body.valuePSelected }).toArray(function (err, bases) {
+      
+      console.log(bases[0].name_base);
+      
+     
+
+      client.close();
+      let leng = bases.length;
+      console.log(leng);
+      let name_bases = [];
+     
+
+      for (let i = 0; i <= (leng - 1); i += 1) {
+
+        let n = bases[i].name_base;
+        if (name_bases.indexOf(n) === -1) {
+          name_bases.push(n);
+        }
+      }
+      let resNB = {
+        nameBase: name_bases,
+      }
+
+      console.log(resNB);
+      response.send(resNB);
+
+    });
+  });
+
+});
+
+router.post("/base", function (request, response, next) {
+  console.log('in backend');
+  console.log(request.body);
+
+  MongoClient.connect(url, function (error, client) {
+    console.log("Conectados a MongoDB");
+    let dbo3 = client.db("gravimetricValues");
+
+    dbo3.collection("bases").find({ name_base: request.body.valueBSelected }).toArray(function (err, bases) {
+      client.close();
+      let resIB = {
+        long: bases[0].long,
+        lat : bases[0].lat,
+        valueG : bases[0].gravity_values,
+        name : bases[0].name_base,
+        pdf : bases[0].pdf_name
+      }
+
+      console.log(resIB);
+      response.send(resIB);
+
+    });
+  });
+
+}); 
 
 
 

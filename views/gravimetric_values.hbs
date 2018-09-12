@@ -1,24 +1,20 @@
-<form method="GET" action="/gravimetric_values/country">
-    <select id="Scountry " name="countryoption">
-        <option id="1"> Canada </option>
-        <option id="2"> Venezuela</option>
-    </select>
-</form>
-<form>
-    <select id="city" >
-        <option id="1"> city 1 </option>
-        <option id="2">city 2</option>
-        <option id="3">city 3</option>
-    </select>
-</form>
-<form>
-    <select id="base">
-        <option id="1"> base 1 </option>
-        <option id="2">base 2</option>
-        <option id="3">base 3</option>
-    </select>
-</form>
+<select id="Scountry " name="countryoption">
+    <option id="1"> Select a country </option>
+    <option id="2"> Canada </option>
+    <option id="3"> Venezuela</option>
+</select>
+<select id="selectCity">
+    <option id="1"> Select a province/state </option>
+</select>
+<select id="selectBases">
+    <option id="1"> Select a base </option>
+</select>
+<ul id="res_valuesG">
+    {{!-- Response from data base --}}
+</ul>
 
-<div>
-    {{{baseInformation}}} aqui va la respuesta Lat LOG NOMBRE PDF
-</div>
+{{!-- <a href="/images/Cariaco.pdf" download="nombre">
+  <img src="/images/pdf.jpg" width="104" height="142">
+</a> --}}
+
+<script src="/javascripts/gravimetric_values.js"></script>
