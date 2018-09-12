@@ -20,7 +20,7 @@ router.post("/country", function (request, response, next) {
     console.log("Conectados a MongoDB");
     let dbo = client.db("gravimetricValues");
 
-    dbo.collection("bases").find({ country: request.body.valueSelected }).toArray(function (err, bases) {
+    dbo.collection("basesG").find({ country: request.body.valueSelected }).toArray(function (err, bases) {
 
       console.log(bases[0].city);
       //console.log (links[0].Country);
@@ -67,7 +67,7 @@ router.post("/province", function (request, response, next) {
     console.log("Conectados a MongoDB");
     let dbo2 = client.db("gravimetricValues");
 
-    dbo2.collection("bases").find({ city: request.body.valuePSelected }).toArray(function (err, bases) {
+    dbo2.collection("basesG").find({ city: request.body.valuePSelected }).toArray(function (err, bases) {
       
       console.log(bases[0].name_base);
       
@@ -106,7 +106,7 @@ router.post("/base", function (request, response, next) {
     console.log("Conectados a MongoDB");
     let dbo3 = client.db("gravimetricValues");
 
-    dbo3.collection("bases").find({ name_base: request.body.valueBSelected }).toArray(function (err, bases) {
+    dbo3.collection("basesG").find({ name_base: request.body.valueBSelected }).toArray(function (err, bases) {
       client.close();
       let resIB = {
         long: bases[0].long,

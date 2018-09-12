@@ -58,7 +58,7 @@
 </div>
 
 
-<div class="cal bouguer">
+<div class="cal bouguer" id="bouguerDiv" >
     <a name="bouguer">
         <h1> Anomaly de Bouguer map</h1>
     </a>
@@ -70,9 +70,14 @@
 
     <input type="file" id="file_data_bouguer" class="file">
     <button type="button" id="bouguer_values" name="bouguer_map">Send data </button>
+    
+    
 
-    <div class="res_bouguer" id="res_bouguer"> AQUI APARECERA el mapa </div>
-    <div id="chart_div"></div>
+     <div class="res_bouguer" id="res_bouguer">  </div>
+     <div id="chart_div">
+         {{!-- Map --}}
+     </div>
+     {{!-- <button><img src="/images/pdf.jpg" id="download">click</button> --}}
 
 </div>
 

@@ -191,7 +191,11 @@ console.log ('ejeY : '+ axisY);
     console.log(resBA);
     response.send(resBA);
 
+
+
 });
+
+
 
 
 module.exports = router;

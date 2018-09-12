@@ -185,10 +185,13 @@ div.cal ul.res_analyst li {
   
 }
 
-.res_bouguer {
-  width: 40%;
-
+.aBRes {
+ width: 50px;
+ height: 50px;
+ overflow-y: scroll;
 }
+
+
 
 
 

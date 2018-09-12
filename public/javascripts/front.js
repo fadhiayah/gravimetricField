@@ -1,5 +1,5 @@
 window.onload = function () {
-   console.log('loaded site')
+    console.log('loaded site')
 
 
     /* // prueba de fetch y funciona 
@@ -294,6 +294,8 @@ window.onload = function () {
                         console.log(typeof (json_data_sentAB));
                         console.log(json_data_sentAB.length);
 
+                      
+
                         var request = new Request(url, {
                             method: 'POST',
                             body: json_data_sentAB,
@@ -317,7 +319,7 @@ window.onload = function () {
                                 console.log(json_responseBA.axisX);
                                 console.log(json_responseBA.axisY);
                                 console.log(parseInt(json_responseBA.axisY));
-                                document.getElementById('res_bouguer').innerHTML = json_responseBA.anomalyValue;
+                                //document.getElementById('res_bouguer').innerHTML = json_responseBA.anomalyValue;
 
                                 let g = document.getElementById('chart_div');
 
@@ -338,12 +340,36 @@ window.onload = function () {
 
                                 Plotly.newPlot(g, dataBA, layout);
                                 ;
+                                const divB = document.getElementById("bouguerDiv");
+                                const clickD = document.createElement("button");
+                                clickD.innerHTML = "Download";
+                                console.log(clickD);
+                                divB.appendChild(clickD);
+                                clickD.addEventListener('click', function () {
+                                    console.log("esta funcionando");
+    
+                                    let out =document.createElement("div");
+                                    let aB = json_responseBA.anomalyValue;
+                                    console.log ("ab : "+ aB);
+                                    let aBT = aB.join(" ");
+                                    console.log ("abT :" + aBT);
+                                    out.className="aBRes";
+                                    out.innerHTML = aBT;
+    
+                                    divB.appendChild(out);
+        
+                                });
+                              
                             });
+                           
+                      
+                    };
 
-                    }
                 });
             });
         }
     });
+
+
 
 }

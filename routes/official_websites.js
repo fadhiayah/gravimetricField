@@ -19,7 +19,7 @@ router.post("/continent", function (request, response, next) {
     console.log("Conectados a MongoDB");
     let dbo = client.db('website');
 
-    dbo.collection("links").find({ Continent: request.body.valueSelected }).toArray(function (err, links) {
+    dbo.collection("linksW").find({ Continent: request.body.valueSelected }).toArray(function (err, links) {
       console.log("no sale nada");
       ///console.log(links);
       console.log(links[0].website);
