@@ -49,44 +49,21 @@ window.onload = function () {
 
                 for (let i = 0; i <= (leng - 1); i += 1) {
 
-                    let a = document.createElement("a");
-                    //let y = a.innerHTML = (c[i] + " : " + w[i]);
-                    let aContent = w[i];
-                    a.innerHTML = aContent;
-                    let flat = document.createComment("img");
-                    //flat.href = "/images/canada";
-                    flat.src = "/images/canada";
-
-
-                    let p = document.createElement("p");
-                    let pContent = c[i];
-                    let y = "hola";
-
-
-                    p.innerHTML = pContent + " : ";
+                    let a = document.createElement("a");     
+                    a.innerHTML =  w[i];    
                     let down = document.createElement("br");
                     a.href = w[i];
                     a.target = "_blank";
                     a.className = "linksWeb";
-                    p.appendChild(flat);
-
-
+                    let p = document.createElement("p");
+                    p.innerHTML = c[i] + " : ";
+                    p.className= "list";
                     resLinks.appendChild(p);
-
                     p.appendChild(a);
-
                     p.appendChild(down);
-
-
                 }
-
-
 
             });
     });
-
-
-
-
 };
 

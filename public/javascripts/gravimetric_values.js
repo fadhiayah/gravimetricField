@@ -145,12 +145,15 @@ window.onload = function () {
                 liLong.innerHTML = ('Longitude : ' + json_response.long);
                 let liValue = document.createElement("li")
                 liValue.innerHTML = ('Gravimetric value [mGal] : ' + json_response.valueG);
+               
 
                 let pdf = document.createElement("a");
                 let img = document.createElement ("img");
                 img.src= "/images/pdf.jpg";
                 pdf.href=json_response.pdf;
                 pdf.download = json_response.name;
+                
+                img.className="pdf";
                 
 
                 ulDa.appendChild(liName);

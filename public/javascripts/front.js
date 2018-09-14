@@ -38,7 +38,6 @@ window.onload = function () {
 
 
 
-
     // ----- Coordenate conversions ----- // 
     const input_coordenate = document.getElementById('coordenate_values');
     console.log(input_coordenate);
@@ -294,7 +293,7 @@ window.onload = function () {
                         console.log(typeof (json_data_sentAB));
                         console.log(json_data_sentAB.length);
 
-                      
+
 
                         var request = new Request(url, {
                             method: 'POST',
@@ -313,13 +312,13 @@ window.onload = function () {
                                 return response.json();
                             })
                             .then(function (json_responseBA) {
-                                // Ahora 'j' es un objeto JSON
+                              
                                 console.log(json_responseBA);
                                 console.log(json_responseBA.anomalyValue);
                                 console.log(json_responseBA.axisX);
                                 console.log(json_responseBA.axisY);
                                 console.log(parseInt(json_responseBA.axisY));
-                                //document.getElementById('res_bouguer').innerHTML = json_responseBA.anomalyValue;
+                                
 
                                 let g = document.getElementById('chart_div');
 
@@ -342,27 +341,31 @@ window.onload = function () {
                                 ;
                                 const divB = document.getElementById("bouguerDiv");
                                 const clickD = document.createElement("button");
-                                clickD.innerHTML = "Download";
+                                clickD.innerHTML = "Values";
                                 console.log(clickD);
-                                divB.appendChild(clickD);
+                                divB.appendChild(clickD); 
+
+
+
                                 clickD.addEventListener('click', function () {
                                     console.log("esta funcionando");
-    
-                                    let out =document.createElement("div");
+                                    
+
+                                    let out = document.createElement("div");
                                     let aB = json_responseBA.anomalyValue;
-                                    console.log ("ab : "+ aB);
-                                    let aBT = aB.join(" ");
-                                    console.log ("abT :" + aBT);
-                                    out.className="aBRes";
-                                    out.innerHTML = aBT;
-    
+                                    console.log("ab : " + aB);
+                                    let aBT = aB.join(", ");
+                                    console.log("abT :" + aBT);
+                                    out.className = "aBRes";
+                                    out.innerHTML = ("Simple Bouguer anomaly : " + aBT);
+
                                     divB.appendChild(out);
-        
+
                                 });
-                              
+
                             });
-                           
-                      
+
+
                     };
 
                 });

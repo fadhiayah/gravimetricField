@@ -1,11 +1,10 @@
-<div class=" cal conversions">
+<div class=" cal conversions down">
     <a name="conversions">
-        <h1 class="up"> Coordenate converstions </h1>
+        <h1 class="t"> Coordenate converstions </h1>
     </a>
     <p>Special tool for the conversion of GPS coordinates (GMS to GD). In case of West or South add the negative sign (-). </p>
-  
-    <hr/>
-   
+    
+
     <h4>GMS (degrees, minutes, seconds)*</h4>
     <fieldset>
         <legend>Latitude : </legend>
@@ -25,60 +24,59 @@
         <input type="number" id="secondLon" name="secondLon" class="sexa">
         <label for="secondLon">''</label>
     </fieldset>
-    <button type="button" name="coordenate_values" id="coordenate_values">Conversions</button> 
-    <hr/>
+    <button type="button" name="coordenate_values" id="coordenate_values">Conversions</button>
+    
+
     <h4>GD (decimal degrees)*</h4>
     <label for="decimalLat">Latitude : </label>
     <input type="text" id="decimalLat" name="decimalLat" class="decimal">
     </br>
     <label for="decimalLon">Longitude : </label>
     <input type="text" id="decimalLon" name="decimalLon" class="decimal">
-    
+
     <h4>* World Geodetic System 1984 (WGS 84)</h4>
 </div>
-<div class="cal analyst">
+
+<div class="cal analyst down">
     <a name="analyst">
-        <h1 class="up"> Data analyst</h1>
+        <h1 class=" t"> Data analyst</h1>
     </a>
     <p>This basic statistical study on your data can help you to a fast quality control.</p>
-    <hr/>
-    <ul class="instructions"> Make sure your file follows the following format: 
-        <li>Input a .csv file</li>
-        <li >Not headers </li>
+    
+    <ul class="instructions"> - Make sure your file follows the following format:
+        <li>Input a .csv file.</li>
+        <li>Not headers. </li>
     </ul>
 
     <input type="file" id="file_data_analyst" class="file">
     <button type="button" id="data_analyst_values" name="data_analyst">Send data</button>
 
     <ul class="res_analyst" id="res_analyst">
-     
+
     </ul>
 
     <div id="chart_divDA"> </div>
 </div>
 
 
-<div class="cal bouguer" id="bouguerDiv" >
+<div class="cal bouguer down" id="bouguerDiv">
     <a name="bouguer">
-        <h1> Anomaly de Bouguer map</h1>
+        <h1 class=" t"> Simple Bouguer anomaly</h1>
     </a>
-
-    <ul> Specifications
-        <li>Rules 1</li>
-        <li>Rule 2 </li>
+    <p>Get the first view of your bouguer anomaly map to rule out anomalous values ​​during your acquisition.</p>
+   
+    <ul class="instructions"> - Make sure your file follows the following format:
+        <li>Input a .csv file.</li>
+        <li> Ensure that the orden and header are : x,y,z,g. </li>
     </ul>
 
     <input type="file" id="file_data_bouguer" class="file">
     <button type="button" id="bouguer_values" name="bouguer_map">Send data </button>
-    
-    
 
-     <div class="res_bouguer" id="res_bouguer">  </div>
-     <div id="chart_div">
-         {{!-- Map --}}
-     </div>
-     {{!-- <button><img src="/images/pdf.jpg" id="download">click</button> --}}
+    <div id="chart_div">
+        {{!-- Bouguer Map --}}
+    </div>  
 
 </div>
 
- <script src="/javascripts/front.js"></script>
+<script src="/javascripts/front.js"></script>
