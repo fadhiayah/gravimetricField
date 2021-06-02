@@ -12,7 +12,7 @@
     "http-errors": "~1.6.2",
     "mongodb": "^3.1.4",
     "nodemailer": "^4.6.8",
-    "papaparse": "^4.6.0",
+    "papaparse": "^5.2.0",
     "simple-statistics": "^6.1.0"
   }
 }
